@@ -20,7 +20,9 @@ Route::get('places', [App\Http\Controllers\PlaceController::class, 'index']);
 Route::get('newPlace', [App\Http\Controllers\PlaceController::class, 'create']);
 Route::get('mapa', [App\Http\Controllers\PlaceController::class, 'mapa']);
 Route::post('setplace', [App\Http\Controllers\PlaceController::class, 'store']);
-
+Route::get('/aviso', function(){
+    return view('aviso');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
